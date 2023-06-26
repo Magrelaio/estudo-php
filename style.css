@@ -8,7 +8,7 @@ body{
     height:100vh;
     margin: 0px;
     display: grid;
-    grid-template-rows: 120px 1fr 60px;
+    grid-template-rows: 120px 1fr 50px;
     grid-template-columns: 1fr;
     grid-template-areas: "cabecalho" "principal" "rodape";
 }
@@ -50,7 +50,7 @@ body{
     box-shadow: 0px 0px 25px 0px rgba(0, 0  , 0, 0.2);
 }
 
-.rodape{
+.rodape{    
     grid-area: rodape;
     background-color: white;
     display: flex;
@@ -69,6 +69,8 @@ body{
 
 .modulo{
     flex-basis: 32%;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .modulo > h3{
@@ -79,3 +81,52 @@ body{
     padding: 10px 20px;
     background-color: crimson;
 }
+
+.modulo > ul{
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.modulo > ul > li{
+    padding: 7px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+
+.modulo > ul > li:hover{
+    background-color: #585757;
+}
+
+.modulo.verde{border: 2px solid #4caf50;}
+.modulo.verde > h3{background-color: #4caf50;}
+
+.modulo.azul {border: 2px solid blue;}
+.modulo.azul > h3{background-color: blue;}
+
+.modulo.preto{border: 2px solid black;}
+.modulo.preto > h3{background-color: black;}
+
+.modulo.roxo{border: 2px solid #9c27b0;}
+.modulo.roxo > h3{background-color: #9c27b0;}
+
+.modulo.rosa{border: 2px solid pink;}
+.modulo.rosa > h3{background-color: pink;}
+
+.modulo.ciano{border: 2px solid cyan;}
+.modulo.ciano > h3{background-color: cyan;}
+
+.modulo.amarelo{border: 2px solid yellow}
+.modulo.amarelo > h3{background-color: yellow;}
+
+.modulo.laranja{border: 2px solid orange}
+.modulo.laranja > h3{background-color: orange;}
+
+.modulo.cinza{border: 2px solid gray}
+.modulo.cinza > h3{background-color: gray;}
