@@ -16,6 +16,29 @@ $conta = [
     'dinheiro' => 1000
 ];
 //ai tu chama ela assim pai
-echo $conta['nome'];
+echo $conta['nome'] . PHP_EOL;
 
+//se tiver varias da pra fazer assim:
+echo "=========================================================================". PHP_EOL;
+
+$conta1 = [
+    "nome"=> "nome1",
+    "dinheiro"=>  1000
+];
+
+$conta2 = [
+    "nome"=> "nome2",
+    "dinheiro"=> 200
+];
+
+$conta3 = [
+    "nome"=> "nome3",
+    "dinheiro"=> 3000
+];
+
+$todasContas = [$conta1, $conta2, $conta3];
+
+for ($c = 0; $c < count($todasContas); $c++){
+    echo $todasContas[$c]['nome'] . PHP_EOL;
+};
 ?>
