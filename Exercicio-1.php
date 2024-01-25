@@ -39,6 +39,6 @@ if( $imc < 18.5){
     echo"Seu peso está na media." . PHP_EOL;
 } else{
     echo"Seu peso está acima da média." . PHP_EOL;
-}
+} 
 
 ?>
