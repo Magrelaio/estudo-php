@@ -3,32 +3,11 @@
 //bora fazer um sistema de saque e deposito em um banquinho de mentirinha rapaz.
 
 //criando pequena função pro cabra n tirar mais dinheiro doq tem e ficar negativo:
-function sacar(array $conta, float $ValorASacar): array 
-{
-    if($ValorASacar > $conta["saldo"]){
-        exibirMensagem(mensagem: "Você não pode sacar por saldo insuficiente!");
-     }else{
-        $conta["saldo"] -= $ValorASacar;
-     };
-    
-     return $conta;
-}
 
-function depositar($conta, $ValorDep)
-{
-    if($ValorDep > 0){
-    $conta['saldo'] += $ValorDep;
-    } else{
-         exibirMensagem(mensagem: "O valor de depósito precisa ser positivo");
-    }
-    return $conta;
-}
-
-
-function exibirMensagem($mensagem)
-{
-    echo $mensagem . PHP_EOL; // - essa vai se a msg"Você não pode sacar por saldo insuficiente." . PHP_EOL;
-}
+//include 'Exercicio-3-Functions.php';
+//include está meio errado, uma vez que torna o arquivo importado não muito importante. Quando o arquivo é essencial para o funcionamento do programa, é necessario usar o REQUIRE!
+require 'Exercicio-3-Functions.php';
+//existe tambem o require_once, que serve para incluir o arquivo uma UNICA vez.
 
 $contasCorrente = [
     '20510221065'=> [
@@ -61,8 +40,6 @@ $contasCorrente['20510221065'] = sacar($contasCorrente['20510221065'], ValorASac
 //indo depositar chama
 $contasCorrente['215645732566'] = depositar($contasCorrente['215645732566'], ValorDep: 300);
 
-
-foreach ($contasCorrente as $cpf => $conta) {
-    echo "CPF:". $cpf . PHP_EOL . "Titular:". $conta["titular"] . PHP_EOL . "Saldo:" . $conta["saldo"] . PHP_EOL . "============================" . PHP_EOL;
-};
-?>
+//algo interessante que eu gostaria de comentar aqui são as diferenças entre passagens por valor e por referencia. Sendo:
+//passagem de variavel por valor: Altera apenas um "clone" da vasriavel desejada. - e passagem por variavel por referencia altera a variavel inteira
+//aqui vai um exemplo disso: function (&$variavel)
