@@ -40,6 +40,11 @@ $contasCorrente['20510221065'] = sacar($contasCorrente['20510221065'], ValorASac
 //indo depositar chama
 $contasCorrente['215645732566'] = depositar($contasCorrente['215645732566'], ValorDep: 300);
 
+echo "Aqui não tem nada porque ele roda na function 2!";
+
+function exibirMensagemHTML($contasCorrente){
+    echo "Só um teskmte";
+}
 //algo interessante que eu gostaria de comentar aqui são as diferenças entre passagens por valor e por referencia. Sendo:
 //passagem de variavel por valor: Altera apenas um "clone" da vasriavel desejada. - e passagem por variavel por referencia altera a variavel inteira
 //aqui vai um exemplo disso: function (&$variavel)

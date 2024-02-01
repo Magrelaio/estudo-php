@@ -29,7 +29,7 @@ function exibirMensagem($mensagem)
 }
 
 foreach ($contasCorrente as $cpf => $conta) {
-    exibirMensagem(
+    exibirMensagemHTML(
         mensagem:"CPF {$cpf}  {PHP_EOL} Titular: {$conta['titular']} Saldo:  {$conta['saldo']}  {PHP_EOL}  ============================ . PHP_EOL"
     );
 };
