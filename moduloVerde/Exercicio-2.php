@@ -1,5 +1,6 @@
 <?php
 
+
 $testList = [19, 93, 38, 03, 13, 90];
 
 //ah q n sei q lá, quero sempre exibir essa lista de forma dinamica - se adicionar mais itens na lista n quero ter q me arrombar e contar tudo
@@ -80,4 +81,8 @@ echo "antes de adcionar:" . print_r($a_simples); #print_r ajuda a imprimir a est
 $a_simples[] = 60;
 echo "depois:" . print_r($a_simples); // ta bugado e o depois ta saindo literalmente depois do array... enfim, deu pra entender
 
+echo "<ul>";
+echo "<li> Só un test </li>";
+echo "<li> Só un test2 </li>";
+echo "</ul>";
 ?>

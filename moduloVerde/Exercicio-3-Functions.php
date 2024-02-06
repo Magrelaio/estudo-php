@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Exercicio-3.php';
 
 function sacar(array $conta, float $ValorASacar): array 
 {
@@ -22,15 +22,14 @@ function depositar($conta, $ValorDep)
     return $conta;
 }
 
-
 function exibirMensagem($mensagem)
 {
     echo $mensagem . PHP_EOL; // - essa vai se a msg"Você não pode sacar por saldo insuficiente." . PHP_EOL;
 }
 
-foreach ($contasCorrente as $cpf => $conta) {
-    exibirMensagemHTML(
-        mensagem:"CPF {$cpf}  {PHP_EOL} Titular: {$conta['titular']} Saldo:  {$conta['saldo']}  {PHP_EOL}  ============================ . PHP_EOL"
-    );
+function exibeConta(array $conta)
+{
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    echo "<li>Titular: $titular. Saldo: {$saldo} </li>";
 };
 ?>
