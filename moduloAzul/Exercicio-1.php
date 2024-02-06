@@ -30,5 +30,4 @@ echo 'Numero Desordenado:';
 var_dump($numero);
 
 echo 'Numero Ordenado';
-var_dump($numeroOrdenado)
-?>
+var_dump($numeroOrdenado);
