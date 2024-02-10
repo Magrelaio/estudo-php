@@ -28,3 +28,9 @@ function ordenaNotas(array $nota1, array $nota2)
 //arsort(array: $notas); //o R faz ele fazer os arrays ao contrario (em ordem alfabetica Z-A, em ordem numerica 10-1)
 //rsort(array aqui); mesma coisa que em cima
 var_dump($notas);
+
+//verificando se é um array:
+if(is_array($notas)){
+    echo 'É um array sim!';
+}
+
