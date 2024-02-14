@@ -10,6 +10,13 @@ $notas = [
     'Rafael' => 4,
 ];
 
+$notas2 = [
+    'Vincius' => null,
+    'Ana' => 9,
+    'Souza' => 5,
+    'Rafael' => 4,
+];
+
 ksort(array: $notas);
 var_dump($notas);
 
@@ -25,3 +32,6 @@ var_dump(in_array(10, $notas)); //posso adicionar tambem strict nessa verificaç
 //ai agora como procuramos um item em um array? IZI, SEGUE O PAI
 echo" Quem tirou 10?" . PHP_EOL;
 echo array_search(needle: 10,haystack: $notas) . PHP_EOL;
+
+var_dump(array_diff($notas, $notas2)); //mostra todas as diferenças entre arrays, existem outras formas dessa função tais como: array_diff_key que mostra a diferença entre letras, e array_diff_assoc que é associative que mostra a diferença entre TUDO.
+
